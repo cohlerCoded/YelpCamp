@@ -15,6 +15,9 @@ router.post(
       const { username, email, password } = req.body;
       const newUser = new User({ email, username });
       const registeredUser = await User.register(newUser, password);
+      req.login(registeredUser, (err) => {
+        if (err) return next();
+      });
       req.flash("success", "Welcome to Yelp Camp!");
       res.redirect("/campgrounds");
     } catch (err) {
