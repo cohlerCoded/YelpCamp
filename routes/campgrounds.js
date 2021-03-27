@@ -12,7 +12,8 @@ const {
 } = require("../controllers/campgrounds");
 const { validateCampground, isLoggedIn, isAuthor } = require("../middleware");
 const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
+const { storage, cloudinary } = require("../cloudinary");
+const upload = multer({ storage });
 
 router
   .route("/")
