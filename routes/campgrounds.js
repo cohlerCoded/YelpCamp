@@ -10,14 +10,17 @@ const {
   editCampground,
   deleteCampground,
 } = require("../controllers/campgrounds");
-
 const { validateCampground, isLoggedIn, isAuthor } = require("../middleware");
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
 
 router
   .route("/")
   .get(catchAsync(index))
-  .post(isLoggedIn, validateCampground, catchAsync(createNewCampground));
-
+  // .post(isLoggedIn, validateCampground, catchAsync(createNewCampground));
+  .post(upload.single("image"), (req, res) => {
+    console.log(req.body, req.file);
+  });
 router.get("/new", isLoggedIn, renderNewForm);
 
 router
