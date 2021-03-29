@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="/stylesheets/stars.css" />
 <div class="row">
   <div class="col-6">
+    <%= [...campground.geometry.coordinates] %>
+    <div id="map" style="width: 400px; height: 300px"></div>
     <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <% campground.images.forEach((img,i)=>{ %>
@@ -160,20 +162,7 @@
     <% } %>
   </div>
 </div>
-<!-- 
-    <h1><%= campground.title %> Details</h1>
-    <h2><%= campground.location %></h2>
-    <img src="<%= campground.image %>" alt="">
-    <p><%= campground.description %> </p>
-    <p><a href="/campgrounds/<%= campground._id%>/edit">Edit</a></p>
-    <p>
-      <form
-        action="/campgrounds/<%= campground._id%>?_method=DELETE"
-        method="post"
-      >
-        <button>Delete</button>
-      </form>
-    </p>
-    <footer>
-      <a href="/campgrounds">Back to Campgrounds</a>
-    </footer> -->
+<script>
+  const mapBoxToken = "<%- process.env.MAPBOX_TOKEN%>";
+</script>
+<script src="/javascripts/showMap.js"></script>
