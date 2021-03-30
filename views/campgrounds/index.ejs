@@ -10,11 +10,13 @@
       <% for(let campground of campgrounds) { %>
       <div class="card mb-3" >
         <div class="row">
-          <% if (campground.images.length){%> 
           <div class="col-md-4">
+            <% if (campground.images.length){ %> 
             <img class="img-fluid" src="<%= campground.images[0].url %>" alt="">
-          </div>
+            <% } else { %> 
+            <img class="img-fluid" src="https://image.freepik.com/free-vector/camping-travel-tent-equipment-cartoon_18591-53394.jpg" alt="">
           <% } %> 
+          </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title"><%= campground.title %></h5>
