@@ -112,3 +112,7 @@ map.on("load", function () {
     map.getCanvas().style.cursor = "";
   });
 });
+
+//map controls
+
+map.addControl(new mapboxgl.NavigationControl());

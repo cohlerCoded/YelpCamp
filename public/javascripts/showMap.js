@@ -12,3 +12,7 @@ new mapboxgl.Marker()
   .setLngLat(campground.geometry.coordinates)
   .setPopup(popup)
   .addTo(map);
+
+//map controls
+
+map.addControl(new mapboxgl.NavigationControl());
