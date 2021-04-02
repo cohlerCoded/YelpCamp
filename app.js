@@ -45,7 +45,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(mongoSanitize());
 
 const sessionConfig = {
+  name: "sesh",
   secret: "notagoodsecret",
+  // secure: true,
   resave: false,
   saveUninitialized: true,
   cookie: {
