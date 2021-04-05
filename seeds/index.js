@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 const mongoose = require("mongoose");
 const Campground = require("../models/campground");
 const cities = require("./cities");
@@ -39,21 +43,21 @@ const seedDB = async () => {
         ],
       },
       images: [
-        {
-          url:
-            "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878215/YelpCamp/ufgnofl36vahljbgoxfw.jpg",
-          filename: "YelpCamp/ufgnofl36vahljbgoxfw",
-        },
-        {
-          url:
-            "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878218/YelpCamp/tru4rtqdc05ys9pdwpeb.jpg",
-          filename: "YelpCamp/tru4rtqdc05ys9pdwpeb",
-        },
-        {
-          url:
-            "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878225/YelpCamp/vd6hpi8ygla63hwos1ka.jpg",
-          filename: "YelpCamp/vd6hpi8ygla63hwos1ka",
-        },
+        // {
+        //   url:
+        //     "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878215/YelpCamp/ufgnofl36vahljbgoxfw.jpg",
+        //   filename: "YelpCamp/ufgnofl36vahljbgoxfw",
+        // },
+        // {
+        //   url:
+        //     "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878218/YelpCamp/tru4rtqdc05ys9pdwpeb.jpg",
+        //   filename: "YelpCamp/tru4rtqdc05ys9pdwpeb",
+        // },
+        // {
+        //   url:
+        //     "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878225/YelpCamp/vd6hpi8ygla63hwos1ka.jpg",
+        //   filename: "YelpCamp/vd6hpi8ygla63hwos1ka",
+        // },
       ],
     });
     await camp.save();
