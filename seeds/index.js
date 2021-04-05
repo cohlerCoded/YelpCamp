@@ -42,20 +42,32 @@ const seedDB = async () => {
         ],
       },
       images: [
+        // {
+        //   url:
+        //     "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878215/YelpCamp/ufgnofl36vahljbgoxfw.jpg",
+        //   filename: "YelpCamp/ufgnofl36vahljbgoxfw",
+        // },
+        // {
+        //   url:
+        //     "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878218/YelpCamp/tru4rtqdc05ys9pdwpeb.jpg",
+        //   filename: "YelpCamp/tru4rtqdc05ys9pdwpeb",
+        // },
+        // {
+        //   url:
+        //     "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878225/YelpCamp/vd6hpi8ygla63hwos1ka.jpg",
+        //   filename: "YelpCamp/vd6hpi8ygla63hwos1ka",
+        // },
         {
-          url:
-            "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878215/YelpCamp/ufgnofl36vahljbgoxfw.jpg",
-          filename: "YelpCamp/ufgnofl36vahljbgoxfw",
+          url: "https://source.unsplash.com/collection/483251",
+          filename: "",
         },
         {
-          url:
-            "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878218/YelpCamp/tru4rtqdc05ys9pdwpeb.jpg",
-          filename: "YelpCamp/tru4rtqdc05ys9pdwpeb",
+          url: "https://source.unsplash.com/collection/483251",
+          filename: "",
         },
         {
-          url:
-            "https://res.cloudinary.com/http-cohlercoded-com/image/upload/v1616878225/YelpCamp/vd6hpi8ygla63hwos1ka.jpg",
-          filename: "YelpCamp/vd6hpi8ygla63hwos1ka",
+          url: "https://source.unsplash.com/collection/483251",
+          filename: "",
         },
       ],
     });
